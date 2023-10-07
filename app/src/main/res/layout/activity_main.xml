@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_3"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:id="@+id/textVieww"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:gravity="center"
+    app:layout_constraintBottom_toTopOf="@id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+android:id="@+id/playeronelayout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        >
+        
+        <TextView
+            android:id="@+id/playerone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jugador 1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            />
+     <ImageView
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:src="@drawable/bolita"
+         android:layout_marginTop="20dp"
+         android:layout_marginBottom="20dp"
+         app:tint="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/playertwolayout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/playertwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jugador 2"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/equis"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:tint="@color/md_theme_light_error" />
+    </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="felicidades ganaste!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:onClick="textView2"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/oswaldo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textVieww"  />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/oswaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:background="@drawable/img_2"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textVieww">
+
+
+        <View
+            android:id="@+id/vista1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="ponerficha"
+            android:tag="0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription=" "
+            app:layout_constraintTop_toTopOf="parent">
+
+        </View>
+
+        <View
+            android:id="@+id/vista2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="ponerficha"
+            android:contentDescription=" "
+            app:layout_constraintStart_toEndOf="@id/vista1"
+            android:tag="1"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+        </View>
+
+        <View
+            android:id="@+id/vista3"
+            android:contentDescription=" "
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="ponerficha"
+            android:tag="2"
+            app:layout_constraintStart_toEndOf="@id/vista2"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </View>
+
+        <View
+            android:id="@+id/vista4"
+            android:contentDescription=" "
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="ponerficha"
+            app:layout_constraintStart_toStartOf="parent"
+            android:tag="3"
+            app:layout_constraintTop_toBottomOf="@id/vista1">
+
+        </View>
+
+
+        <View
+            android:id="@+id/vista5"
+            android:layout_width="100dp"
+            android:contentDescription=" "
+            android:layout_height="100dp"
+            android:onClick="ponerficha"
+            app:layout_constraintStart_toEndOf="@id/vista4"
+            android:tag="4"
+            app:layout_constraintTop_toBottomOf="@id/vista2">
+
+        </View>
+
+        <View
+            android:id="@+id/vista6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="ponerficha"
+            android:contentDescription=" "
+            android:tag="5"
+            app:layout_constraintStart_toEndOf="@+id/vista5"
+            app:layout_constraintTop_toBottomOf="@+id/vista3">
+
+        </View>
+
+        <View
+            android:id="@+id/vista7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription=" "
+            android:onClick="ponerficha"
+            android:tag="6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vista4">
+
+        </View>
+
+        <View
+            android:id="@+id/vista8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription=" "
+            android:tag="7"
+            android:onClick="ponerficha"
+            app:layout_constraintStart_toEndOf="@+id/vista7"
+            app:layout_constraintTop_toBottomOf="@+id/vista5">
+
+        </View>
+
+
+
+        <View
+            android:id="@+id/vista9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription=" "
+            android:onClick="ponerficha"
+            android:tag="8"
+            app:layout_constraintStart_toEndOf="@+id/vista8"
+            app:layout_constraintTop_toBottomOf="@+id/vista6">
+
+        </View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
